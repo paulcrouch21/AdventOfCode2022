@@ -13,7 +13,7 @@ for x in lines:
           weight += int(x)
           if x == lines[len(lines) - 1]:
                totalWeightPerElf.append(weight)
-     else
+     else:
           totalWeightPerElf.append(weight)
           weight = 0
 
