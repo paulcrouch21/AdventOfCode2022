@@ -21,15 +21,5 @@ def part01(input):
 
      return totalPairs
 
-def createNumbersBetween(min, max):
-     newList = [x for x in range(min, max)]
-     '''
-     int[] myArray = new int[length+indexLow];
-     for(int i=indexLow; i<indexLow+length; i++){    
-     myArray[i] = i;
-     }
-     '''
-     return
-
 if __name__ == '__main__':
      main()
