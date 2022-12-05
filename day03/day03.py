@@ -9,7 +9,8 @@ def main():
           lines = myFile.readlines()
           lines = [line.strip() for line in lines]
 
-     print(f'The sum of the priorities of the item types are {part01(lines)}')
+     print(f'The sum of the priorities of the item types are {part01(lines)} [part01]')
+     print(f'The sum of the priorities of the item types are {part02(lines)} [part02]')
 
 def part01(input):
      sum = 0
@@ -27,6 +28,23 @@ def part01(input):
           mostCommonChar = ''.join(set(firstHalf).intersection(secondHalf))
           #adds the value of each character to the sum
           sum += valueOfLetter(mostCommonChar)
+
+     return sum
+
+def part02(input):
+     sum = 0
+
+     #divide the list by groups of 3
+     counter = 0
+     while counter < len(input):
+          string1 = input[counter]
+          string2 = input[counter + 1]
+          string3 = input[counter + 2]
+          #determines the most common character in each group
+          mostCommonChar = ''.join(set(string1).intersection(string2))
+          mostCommonChar = mostCommonChar.join(set(mostCommonChar).intersection(string3))
+          sum += valueOfLetter(mostCommonChar)
+          counter += 3
 
      return sum
 
