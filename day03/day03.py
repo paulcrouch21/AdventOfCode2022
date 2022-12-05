@@ -1,7 +1,3 @@
-#split in half
-#determine most common value in each half
-#determine the priority of that value
-#sum all of them up together
 import sys
 
 def main():
